@@ -13,9 +13,16 @@ export const mongooseConfig: MongooseModuleAsyncOptions = {
                 "Environment variable 'MONGO_URI' cannot be undefined",
             )
         }
+        const dbName = configService.get<string>('MONGO_DB_NAME')
+        if (uri === undefined) {
+            throw new Error(
+                "Environment variable 'MONGO_DB_NAME' cannot be undefined",
+            )
+        }
 
         return {
             uri,
+            dbName,
         }
     },
     inject: [ConfigService],
