@@ -7,7 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm'
 
 import { config } from './config/config'
 import { typeOrmConfig } from './config/typeorm.config'
-import { PostgresqlResolver } from './postgresql/postgresql.resolver'
+import { PostgresqlModule } from './postgresql/postgresql.module'
 
 @Module({
     imports: [
@@ -17,7 +17,7 @@ import { PostgresqlResolver } from './postgresql/postgresql.resolver'
             autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
             sortSchema: true,
         }),
+        PostgresqlModule,
     ],
-    providers: [PostgresqlResolver],
 })
 export class AppModule {}

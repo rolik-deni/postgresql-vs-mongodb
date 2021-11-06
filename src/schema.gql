@@ -2,6 +2,11 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Mutation {
+  createSeveralStructure(n: Float!): String!
+  removeAll: String!
+}
+
 type Query {
-  ping: String!
+  findAllUsers: String!
 }

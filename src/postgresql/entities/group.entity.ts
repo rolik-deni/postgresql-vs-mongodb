@@ -7,13 +7,15 @@ import {
     PrimaryGeneratedColumn,
 } from 'typeorm'
 
+import { GroupInterface } from '../interfaces/group.interface'
+
 import { LevelEntity } from './level.entity'
 import { UserInGroupEntity } from './user-in-group.entity'
 
 export const GROUP_TABLE_NAME = 'groups'
 
 @Entity(GROUP_TABLE_NAME)
-export class GroupEntity {
+export class GroupEntity implements GroupInterface {
     @PrimaryGeneratedColumn('uuid')
     id: string
 
@@ -24,9 +26,12 @@ export class GroupEntity {
     shortName: string
 
     @OneToMany(() => UserInGroupEntity, (userInGroup) => userInGroup.group)
-    userInGroups: UserInGroupEntity[] | undefined
+    users: UserInGroupEntity[] | undefined
 
-    @OneToOne(() => LevelEntity, (level) => level.group, { nullable: false })
+    @OneToOne(() => LevelEntity, (level) => level.group, {
+        nullable: false,
+        onDelete: 'CASCADE',
+    })
     @JoinColumn()
     level: LevelEntity
 }
