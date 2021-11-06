@@ -27,7 +27,6 @@ export const typeOrmConfig: TypeOrmModuleAsyncOptions = {
             username: configService.get('PSQL_USERNAME'),
             password: configService.get('PSQL_PASSWORD'),
             synchronize: true,
-            dropSchema: true,
         }
     },
     inject: [ConfigService],
