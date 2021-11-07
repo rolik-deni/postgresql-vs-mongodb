@@ -2,9 +2,9 @@ import { Group } from '../schemas/group.schema'
 import { User } from '../schemas/user.schema'
 
 export interface UserInGroupInterface {
-    createdAt: Date
+    createAt: Date
 
-    deletedAt: Date | undefined
+    deleteAt: Date | undefined
 
     user: User | undefined
 

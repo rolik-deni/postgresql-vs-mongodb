@@ -13,10 +13,10 @@ export const USER_IN_GROUP_COLLECTION_NAME = 'users_in_groups'
 @Schema({ collection: USER_IN_GROUP_COLLECTION_NAME })
 export class UserInGroup implements UserInGroupInterface {
     @Prop({ type: Date, default: Date.now() })
-    createdAt: Date
+    createAt: Date
 
     @Prop({ type: Date })
-    deletedAt: Date | undefined
+    deleteAt: Date | undefined
 
     @Prop({ type: Types.ObjectId, ref: 'User' })
     user: User

@@ -27,10 +27,10 @@ export class User implements UserInterface {
     password: string
 
     @Prop({ type: Date, default: Date.now() })
-    createdAt: Date
+    createAt: Date
 
     @Prop({ type: Date })
-    deletedAt: Date | undefined
+    deleteAt: Date | undefined
 
     @Prop({ type: [{ type: Types.ObjectId, ref: 'Joke' }] })
     jokes: Joke[] | undefined

@@ -12,9 +12,9 @@ export interface UserInterface {
 
     password: string
 
-    createdAt: Date
+    createAt: Date
 
-    deletedAt: Date | undefined
+    deleteAt: Date | undefined
 
     jokes: Joke[] | undefined
 
