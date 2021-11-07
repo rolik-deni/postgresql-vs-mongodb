@@ -15,7 +15,7 @@ import { UserEntity } from './entities/user.entity'
 import { PostgresqlService } from './postgresql.service'
 
 const NUMBER_OF_ITERATIONS_DEFAULT = 1
-const TERMINATION_TIME = 60000 // in one minute
+const TERMINATION_TIME = 120000 // in two minutes
 jest.setTimeout(TERMINATION_TIME)
 
 describe('postgresqlService', () => {
