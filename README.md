@@ -33,7 +33,7 @@ $ NUMBER_OF_ITERATIONS=1000 npm test
 ## Results table
 
 |                  | PostgreSQL + TypeORM              | MongoDB + Mongoose                |
-| :--------------- | :-------------------------------- | --------------------------------- |
+| ---------------- | --------------------------------- | --------------------------------- |
 | 100 iterations   | Write (1352 ms) / Read (56 ms)    | Write (1184 ms) / Read (147 ms)   |
 | 1000 iterations  | Write (8562 ms) / Read (334 ms)   | Write (8224 ms) / Read (853 ms)   |
 | 10000 iterations | Write (78504 ms) / Read (2213 ms) | Write (63105 ms) / Read (6875 ms) |
