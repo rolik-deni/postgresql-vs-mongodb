@@ -15,7 +15,7 @@ import { UserInGroup, UserInGroupSchema } from './schemas/user-in-group.schema'
 import { User, UserSchema } from './schemas/user.schema'
 
 const NUMBER_OF_ITERATIONS_DEFAULT = 1
-const TERMINATION_TIME = 60000 // in one minute
+const TERMINATION_TIME = 120000 // in two minutes
 jest.setTimeout(TERMINATION_TIME)
 
 describe('MongodbService', () => {
